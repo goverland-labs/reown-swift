@@ -23,9 +23,9 @@ struct Web3ModalView: View {
         switch router.currentRoute as? Router.ConnectingSubpage {
         case .none:
             EmptyView()
-        case .connectWallet:
-            ConnectWalletView()
-        case .allWallets:
+        case .connectWallet, .allWallets:
+//            ConnectWalletView()
+//        case .allWallets:
             if #available(iOS 14.0, *) {
                 AllWalletsView()
             } else {
@@ -51,14 +51,14 @@ struct Web3ModalView: View {
     
     private func modalHeader() -> some View {
         HStack(spacing: 0) {
-            switch router.currentRoute as? Router.ConnectingSubpage {
-            case .none:
-                EmptyView()
-            case .connectWallet:
-                helpButton()
-            default:
-                backButton()
-            }
+//            switch router.currentRoute as? Router.ConnectingSubpage {
+//            case .none:
+//                EmptyView()
+//            case .connectWallet:
+//                helpButton()
+//            default:
+//                backButton()
+//            }
             
             Spacer()
             
@@ -114,7 +114,7 @@ extension Router.ConnectingSubpage {
     var title: String? {
         switch self {
         case .connectWallet:
-            return "Connect wallet"
+            return ""
         case .qr:
             return "WalletConnect"
         case .allWallets:

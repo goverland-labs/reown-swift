@@ -3,7 +3,7 @@ import Foundation
 class AnalyticsService: AnalyticsProvider, ObservableObject {
     private(set) static var shared = AnalyticsService(providers: [
 //        LoggingAnalyticsProvider(),
-        ClickstreamAnalyticsProvider()
+//        ClickstreamAnalyticsProvider()
     ])
 
     private let providers: [AnalyticsProvider]

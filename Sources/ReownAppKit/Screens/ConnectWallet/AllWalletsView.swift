@@ -33,7 +33,7 @@ struct AllWalletsView: View {
                 W3MTextField("Search wallet", text: $searchTerm)
                     .ignoresSafeArea(.keyboard, edges: .bottom)
                     
-                qrButton()
+//                qrButton()
             }
             .padding(.horizontal)
             .padding(.vertical, Spacing.xs)
